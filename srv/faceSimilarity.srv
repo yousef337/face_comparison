@@ -1,0 +1,6 @@
+sensor_msgs/Image img1
+sensor_msgs/Image img2
+---
+bool isSimilar
+float64 similar
+bool error
