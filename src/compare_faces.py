@@ -9,7 +9,7 @@ from cv_bridge import CvBridge
 
 from face_compare.images import get_face
 from face_compare.model import facenet_model, img_to_encoding
-from face_compare.srv import faceSimilarity, faceSimilarityResponse
+from face_comparison.srv import faceSimilarity, faceSimilarityResponse
 # load model
 model = facenet_model(input_shape=(3, 96, 96))
 
@@ -46,7 +46,7 @@ def run(req):
     return res
 
 rospy.init_node("FaceSimilarityService")
-rospy.Service('engagementScore', faceSimilarity, run)
+rospy.Service('FaceSimilarity', faceSimilarity, run)
 rospy.spin()
 
 
